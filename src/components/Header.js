@@ -3,20 +3,13 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className="flex pa1 justify-between nowrap orange">
-      <div className="flex flex-fixed black">
+    <div className="flex pv4 justify-center nowrap">
+      <div className="flex-column flex-fixed tc black">
         <Link to="/" className="no-underline black">
-          <div className="fw7 mr1">Ultimate Blog</div>
-        </Link>        
-        <Link to="/" className="ml1 no-underline black">
-          new
+          <h1 className="fw7 mb3">WriteOn</h1>
         </Link>
-        <div className="ml1">|</div>
-        <Link
-          to="/create"
-          className="ml1 no-underline black"
-        >
-          submit
+        <Link to="/create" className="mt3 no-underline">
+          submit write on
         </Link>
       </div>
     </div>

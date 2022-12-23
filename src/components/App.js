@@ -1,17 +1,13 @@
-import React from 'react'
-import PostList from './PostList';
 import CreatePost from './CreatePost';
 import Header from './Header';
-import '../styles/App.css';
+import PostList from './PostList';
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Todo from './Todo';
 
 function App() {
   return (
     <div className="center w85">
       <Header />
-        <Todo />
-      <div className="ph3 pv1 background-gray">
         <Routes>
           <Route path="/" element={<PostList/>} />
           <Route
@@ -19,7 +15,6 @@ function App() {
             element={<CreatePost/>}
           />
         </Routes>
-      </div>
     </div>
   );
 }
