@@ -8,6 +8,11 @@ export const POSTS_QUERY = gql`
      id
      body
      title
+     comment {
+       id
+       name
+       message
+     }
    }
  }
 `
@@ -20,7 +25,7 @@ const PostList = () => {
       { !loading && data && (
         <>
           {data.posts.map((post) => (
-            <Post key={post.id} post={post} />
+              <Post key={post.id} post={post} />
           ))}
         </>
       ) }
