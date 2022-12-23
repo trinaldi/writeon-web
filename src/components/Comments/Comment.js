@@ -3,7 +3,7 @@ import React from 'react'
 const Comment = props => {
   return (
     <div>
-      <p className="ma1"> ⤷ {props.message}</p>
+      <p className="ml3 mv3"> ⤷ {props.message}</p>
     </div>
   )
 

@@ -1,6 +1,6 @@
-import CreatePost from './CreatePost';
+import CreatePost from './Post/CreatePost';
 import Header from './Header';
-import PostList from './PostList';
+import PostList from './Post/PostList';
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
