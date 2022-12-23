@@ -5,10 +5,10 @@ const Todo = () => {
   const isDone = done ? 'strike bg-washed-green' : ''
 
   return (
-    <article className="mw5 mw6-ns hidden bl mv3">
+    <article className="mw3 mw6-ns hidden bl">
       <form className="pa1">
-        <fieldset id="my_todos" className="bn">
-          <div className="flex items-center mb2">
+        <fieldset id="my_todos" className="pa0 bn">
+          <div className="flex items-center">
             <input
               className="mr2"
               type="checkbox"
