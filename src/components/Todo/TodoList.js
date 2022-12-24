@@ -1,5 +1,6 @@
 import React from 'react'
 import Todo from './Todo';
+import AddTodo from './AddTodo';
 
 const TodoList = (props) => {
   const { postId, items } = props
@@ -16,6 +17,7 @@ const TodoList = (props) => {
           />
         ))
       }
+      <AddTodo postId={postId}/>
     </>
   )
 }
