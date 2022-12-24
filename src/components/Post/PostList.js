@@ -13,6 +13,11 @@ export const POSTS_QUERY = gql`
        name
        message
      }
+     todo {
+       id
+       done
+       task
+     }
    }
  }
 `

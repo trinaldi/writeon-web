@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# WriteOn
+
+I'm *specially* a moron when it comes to React at this point of time
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
