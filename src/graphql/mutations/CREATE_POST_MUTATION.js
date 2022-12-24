@@ -7,6 +7,15 @@ export const CREATE_POST_MUTATION = gql`
         id
         title
         body
+        comment {
+          id
+          message
+        }
+        todo {
+          id
+          done
+          task
+        }
       }
     }
   }
