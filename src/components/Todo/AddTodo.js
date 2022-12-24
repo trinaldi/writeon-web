@@ -12,15 +12,23 @@ const AddTodo = (props) => {
 
   return(
     <>
-      {!newTodo && 
+      {!newTodo &&
       <small
         onClick={() => setNewTodo(!newTodo)}
         className="cp f6 black-60 db ma2">
         add todo
       </small>
       }
-      { newTodo
-          && <NewTodo onNewTodo={handleSubmit} postId={postId} />}
+      { newTodo &&
+        <div>
+          <small
+            onClick={handleSubmit}
+            className="cp f6 black-60 db ma2">
+            nope
+          </small>
+          <NewTodo onNewTodo={handleSubmit} postId={postId} />
+        </div>
+      }
     </>
   )
 }
