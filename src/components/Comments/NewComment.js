@@ -24,7 +24,6 @@ const NewComment = (props) => {
         data: {
           posts: [newComment, ...data.posts]
         }})
-
     }
   })
 
