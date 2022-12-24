@@ -1,29 +1,8 @@
 import React, { useState } from 'react'
-import { useMutation, gql } from '@apollo/client'
-import { POSTS_QUERY } from '../Post/PostList';
+import { useMutation } from '@apollo/client'
+import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
+import { ADD_TODO_MUTATION } from '../../graphql/mutations/ADD_TODO_MUTATION';
 
-const ADD_TODO_MUTATION = gql`
-mutation($task: String!, $postId: String!) {
-  addTodo(input: { done: false, task: $task, postId: $postId }) {
-    errors
-    post {
-      body
-      comment {
-        id
-        name
-        message
-      }
-      id
-      title
-      todo {
-        id
-        task
-        done
-      }
-    }
-  }
-}
-`
 
 const NewTodo = (props) => {
   const { postId } = props

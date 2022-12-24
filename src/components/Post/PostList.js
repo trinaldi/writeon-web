@@ -1,26 +1,7 @@
 import React from 'react'
 import Post from './Post'
-import { useQuery, gql } from '@apollo/client'
-
-export const POSTS_QUERY = gql`
- {
-   posts {
-     id
-     body
-     title
-     comment {
-       id
-       name
-       message
-     }
-     todo {
-       id
-       done
-       task
-     }
-   }
- }
-`
+import { useQuery } from '@apollo/client'
+import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
 
 const PostList = () => {
   const { data, loading } = useQuery(POSTS_QUERY)

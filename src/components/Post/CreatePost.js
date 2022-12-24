@@ -1,19 +1,9 @@
 import React, { useState } from 'react'
-import { useMutation, gql } from '@apollo/client'
+import { useMutation } from '@apollo/client'
 import { useNavigate } from 'react-router-dom'
-import { POSTS_QUERY } from './PostList';
+import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
+import { CREATE_POST_MUTATION } from '../../graphql/mutations/CREATE_POST_MUTATION';
 
-const CREATE_POST_MUTATION = gql`
-  mutation($title: String!, $body: String!) {
-    createPost(input: { title: $title, body: $body }) {
-      post {
-        id
-        title
-        body
-      }
-    }
-  }
-`
 const CreatePost = () => {
   const [formState, setFormState] = useState({
     title: '',

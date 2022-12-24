@@ -1,21 +1,8 @@
 import React, { useState } from 'react'
-import { useMutation, gql } from '@apollo/client'
-import { POSTS_QUERY } from '../Post/PostList';
+import { useMutation } from '@apollo/client'
+import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
+import { NEW_COMMENT_MUTATION } from '../../graphql/mutations/NEW_COMMENT_MUTATION';
 
-const NEW_COMMENT_MUTATION = gql`
-  mutation($message: String!, $postId: String!) {
-    addComment(input: { message: $message, postId: $postId  }) {
-      clientMutationId
-      errors
-      post {
-        comment {
-          id
-          message
-        }
-      }
-    }
-  }
-`
 const NewComment = (props) => {
   const { postId } = props
   const [formState, setFormState] = useState({
