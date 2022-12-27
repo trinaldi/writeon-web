@@ -29,7 +29,7 @@ const Todo = (props) => {
   })
 
   return (
-    <article key={id} className="mw3 mw6-ns hidden bl">
+    <article key={id} className="w-100 mw6-ns hidden bl">
       <form className="pa1">
         <fieldset id="my_todos" className="pa0 bn">
           <div className="flex items-center">
