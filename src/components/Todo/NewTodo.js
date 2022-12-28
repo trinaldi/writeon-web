@@ -4,9 +4,7 @@ import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
 import { ADD_TODO_MUTATION } from '../../graphql/mutations/ADD_TODO_MUTATION';
 
 
-const NewTodo = (props) => {
-  const { postId } = props
-
+const NewTodo = ({ postId, onNewTodo }) => {
   const [formState, setFormState] = useState({
     task: ''
   })
@@ -26,7 +24,7 @@ const NewTodo = (props) => {
           posts: [addTodo, ...data.posts]
         }})
     },
-    onCompleted: () => props.onNewTodo()
+    onCompleted: () => onNewTodo()
   })
 
   return(

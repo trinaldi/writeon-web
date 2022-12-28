@@ -3,8 +3,7 @@ import { useMutation } from '@apollo/client'
 import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
 import { NEW_COMMENT_MUTATION } from '../../graphql/mutations/NEW_COMMENT_MUTATION';
 
-const NewComment = (props) => {
-  const { postId } = props
+const NewComment = ({ postId}) => {
   const [formState, setFormState] = useState({
     postId: '',
     message: ''
@@ -12,7 +11,7 @@ const NewComment = (props) => {
 
   const [newComment] = useMutation(NEW_COMMENT_MUTATION, {
     variables: {
-      postId: postId,
+      postId,
       message: formState.message,
     },
     update: (cache, { data: { addComment } }) => {

@@ -1,18 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Title from './Typography/Title';
 
 const Header = () => {
   return (
-    <div className="flex pv4 justify-center nowrap">
+    <header className="flex pv4 justify-center nowrap">
       <div className="flex-column flex-fixed tc black">
-        <Link to="/" className="no-underline black">
-          <h1 className="fw7 mb3">WriteOn</h1>
+        <Link to="/" className="mt3 no-underline">
+          <Title>WriteOn</Title>
         </Link>
         <Link to="/create" className="mt3 no-underline">
           submit write on
         </Link>
       </div>
-    </div>
+    </header>
   )
 }
 
