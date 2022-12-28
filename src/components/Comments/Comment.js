@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Comment = props => {
+const Comment = ({ message }) => {
   return (
-    <div>
-      <p className="ml3 mv3"> ⤷ {props.message}</p>
-    </div>
+    <li className="ml3 mv3"> ⤷ {message}</li>
   )
 
 }

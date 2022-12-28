@@ -7,15 +7,15 @@ const PostList = () => {
   const { data, loading } = useQuery(POSTS_QUERY)
 
   return (
-    <div>
+    <>
       { !loading && data && (
-        <>
+        <section>
           {data.posts.map((post) => (
-              <Post key={post.id} post={post} />
+            <Post key={post.id} post={post} />
           ))}
-        </>
+        </section>
       ) }
-    </div>
+    </>
   )
 }
 

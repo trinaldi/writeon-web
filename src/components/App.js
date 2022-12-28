@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="center w85">
       <Header />
+      <main>
         <Routes>
           <Route path="/" element={<PostList/>} />
           <Route
@@ -15,6 +16,7 @@ function App() {
             element={<CreatePost/>}
           />
         </Routes>
+      </main>
     </div>
   );
 }

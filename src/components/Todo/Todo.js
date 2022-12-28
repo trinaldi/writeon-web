@@ -3,9 +3,7 @@ import { useMutation } from '@apollo/client'
 import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
 import { UPDATE_TODO_MUTATION } from '../../graphql/mutations/UPDATE_TODO_MUTATION';
 
-const Todo = (props) => {
-  const { postId, id, done, task } = props
-
+const Todo = ({ postId, id, done, task }) => {
   const completed = done ? 'strike bg-washed-green' : ''
 
   const [updateTodo] = useMutation(UPDATE_TODO_MUTATION, {
@@ -29,7 +27,7 @@ const Todo = (props) => {
   })
 
   return (
-    <article key={id} className="w-100 mw6-ns hidden bl">
+    <li key={id} className="w-100 mw6-ns hidden bl">
       <form className="pa1">
         <fieldset id="my_todos" className="pa0 bn">
           <div className="flex items-center">
@@ -46,7 +44,7 @@ const Todo = (props) => {
           </div>
         </fieldset>
       </form>
-    </article>
+    </li>
   )
 }
 

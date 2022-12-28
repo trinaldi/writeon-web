@@ -1,13 +1,13 @@
 import React from 'react'
 import Comment from './Comment';
 
-const CommentList = (props) => {
+const CommentList = ({ comments }) => {
   return(
-    <>
-      {props.comments && props.comments.map(c => (
+    <ul className="list pl0 w-100">
+      {comments && comments.map(c => (
         <Comment key={c.id} message={c.message} />
       ))}
-    </>
+    </ul>
   )
 }
 
