@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import NewTodo from './NewTodo';
-import Button from '../UI/Input/Button';
+import ButtonLink from '../UI/Input/ButtonLink';
 
 const AddTodo = ({ postId }) => {
   const [ newTodo, setNewTodo ] = useState(false)
@@ -12,15 +12,15 @@ const AddTodo = ({ postId }) => {
   return(
     <>
       {!newTodo &&
-      <Button
+      <ButtonLink
         click={handleSubmit}
-        inputStyle={'cp f6 black-60 db ma2'}>add todo</Button>
+        inputStyle={'cp f6 black-60 db ma2'}>add todo</ButtonLink>
       }
       { newTodo &&
         <>
-          <Button
+          <ButtonLink
             click={handleSubmit}
-            inputStyle={'cp f6 black-60 db ma2'}>nope</Button>
+            inputStyle={'cp f6 black-60 db ma2'}>nope</ButtonLink>
           <NewTodo onNewTodo={handleSubmit} postId={postId} />
         </>
       }
