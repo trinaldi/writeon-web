@@ -11,6 +11,10 @@ export const POSTS_QUERY = gql`
        name
        message
      }
+     mood {
+       id
+       mood
+     }
      todo {
        id
        done
