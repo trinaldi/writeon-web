@@ -43,3 +43,32 @@ input {
 .cp {
   cursor: pointer;
 }
+
+.mood > label {
+  font-size: 2.15rem;
+}
+
+.mood > input {
+  opacity: 0;
+  margin: -5px;
+}
+
+.mood.very_bad {
+  background-color: #E7040F;
+}
+
+.mood.bad {
+  background-color: #FF6300;
+}
+
+.mood.neutral {
+  background-color: #FFD700;
+}
+
+.mood.good {
+  background-color: #19A974;
+}
+
+.mood.very_good {
+  background-color: #137752;
+}

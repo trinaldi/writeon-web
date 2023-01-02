@@ -3,9 +3,8 @@ import { POSTS_QUERY } from '../../../graphql/queries/POSTS_QUERY'
 import { useMutation } from '@apollo/client'
 import { ADD_MOOD_MUTATION } from '../../../graphql/mutations/ADD_MOOD_MUTATION';
 
-const RadioInput = ({ myMood, postId }) => {
+const MoodInput = ({ myMood, postId }) => {
   const [mood, setMood] = useState(myMood)
-  const [disabled, setDisabled] = useState()
 
   const handleChange = (e) => {
     if(e.target.checked) {
@@ -28,8 +27,7 @@ const RadioInput = ({ myMood, postId }) => {
         data: {
           posts: [addMood, ...data.posts]
         }})
-    },
-    onCompleted: () => setDisabled(true)
+    }
   })
 
   useEffect(() => {
@@ -38,8 +36,9 @@ const RadioInput = ({ myMood, postId }) => {
 
   return(
     <>
-      <form disabled={disabled} className="flex justify-center bn">
-        <div className="flex flex-column">
+      <form className="flex bn">
+        <div
+          className={`flex flex-column ${mood === 'very_bad' ? 'mood very_bad' : ''}`}>
           <label htmlFor="very_bad" className="f3 pa2">😢</label>
           <input
             name="mood"
@@ -48,7 +47,8 @@ const RadioInput = ({ myMood, postId }) => {
             type="checkbox"
             value="very_bad" />
         </div>
-        <div className="flex flex-column">
+        <div
+          className={`flex flex-column ${mood === 'bad' ? 'mood bad' : ''} `}>
           <label htmlFor="bad" className="f3 pa2">🙁</label>
           <input
             name="mood"
@@ -57,7 +57,8 @@ const RadioInput = ({ myMood, postId }) => {
             type="checkbox"
             value="bad" />
         </div>
-        <div className="flex flex-column">
+        <div
+          className={`flex flex-column ${mood === 'neutral' ? 'mood neutral' : ''}`}>
           <label htmlFor="neutral" className="f3 pa2">😐</label>
           <input
             name="mood"
@@ -66,7 +67,8 @@ const RadioInput = ({ myMood, postId }) => {
             type="checkbox"
             value="neutral" />
         </div>
-        <div className="flex flex-column">
+        <div
+          className={`flex flex-column ${mood === 'good' ? 'mood good' : ''}`}>
           <label htmlFor="good" className="f3 pa2">🙂</label>
           <input
             checked={mood === 'good'}
@@ -76,7 +78,8 @@ const RadioInput = ({ myMood, postId }) => {
             id="good"
             value="good" />
         </div>
-        <div className="flex flex-column">
+        <div
+          className={`flex flex-column ${mood === 'very_good' ? 'mood very_good' : ''}`}>
           <label htmlFor="very_good" className="f3 pa2">😁</label>
           <input
             name="mood"
@@ -90,4 +93,4 @@ const RadioInput = ({ myMood, postId }) => {
   )
 }
 
-export default RadioInput
+export default MoodInput
