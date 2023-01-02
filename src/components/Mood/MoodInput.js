@@ -5,6 +5,7 @@ const MoodInput = ({ emoji, mood, checked, handleChange }) => {
     <>
       <label htmlFor="very_bad" className="f3 pa2">{ emoji }</label>
       <input
+        className="o-0 m-25"
         name="mood"
         checked={checked === mood}
         onClick={handleChange}
