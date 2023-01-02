@@ -27,7 +27,7 @@ will run the dev environment. The backend is fueled by [WriteOn](https://github.
 
 ## Docker
 
-As of 2022-12-29` we also have a `Dockerfile` and `docker-compose.yml`. The first is a set of instructions to build a Docker image of the app 
+We also have a `Dockerfile` and `docker-compose.yml`. The first is a set of instructions to build a Docker image of the app 
 whereas the second is used to run a container of the image.
 
 Make sure ypu have [Docker](https://www.docker.com) and [Docker Compose](https://docs.docker.com/compose/install/) installed. With the Docker service running, type:
