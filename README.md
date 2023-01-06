@@ -42,4 +42,4 @@ inside the root path.
 ## Contributing
 
 If you wanna contribute in _any_ form with code, ideas, critique, please use the 
-issues.
+issues. I would love some review, this code is smelly.
