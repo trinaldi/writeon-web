@@ -48,33 +48,32 @@ const MoodPanel = ({ myMood, postId }) => {
         </div>
         <div
           className={`flex flex-column ${mood === 'bad' ? 'mood bad' : ''} `}>
-        
-        <MoodInput
-          checked={mood}
-          mood="bad"
-          handleChange={handleChange}
-        emoji="🙁" />
+          <MoodInput
+            checked={mood}
+            mood="bad"
+            handleChange={handleChange}
+            emoji="🙁" />
         </div>
         <div className={`flex flex-column ${mood === 'neutral' ? 'mood neutral' : ''} `}>
-        <MoodInput
-          checked={mood}
-          mood="neutral"
-          handleChange={handleChange}
-        emoji="😐" />
+          <MoodInput
+            checked={mood}
+            mood="neutral"
+            handleChange={handleChange}
+            emoji="😐" />
         </div>
         <div className={`flex flex-column ${mood === 'good' ? 'mood good' : ''} `}>
-        <MoodInput
-          checked={mood}
-          mood="good"
-          handleChange={handleChange}
-        emoji="🙂" />
+          <MoodInput
+            checked={mood}
+            mood="good"
+            handleChange={handleChange}
+            emoji="🙂" />
         </div>
         <div className={`flex flex-column ${mood === 'very_good' ? 'mood very_good' : ''} `}>
-        <MoodInput
-          checked={mood}
-          mood="very_good"
-          handleChange={handleChange}
-        emoji="😁" />
+          <MoodInput
+            checked={mood}
+            mood="very_good"
+            handleChange={handleChange}
+            emoji="😁" />
         </div>
 
       </form>
