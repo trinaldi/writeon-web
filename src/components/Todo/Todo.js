@@ -27,7 +27,7 @@ const Todo = ({ postId, id, done, task }) => {
   })
 
   return (
-    <li key={id} className="w-100 mw6-ns hidden bl">
+    <li key={id} className="w-100 mw7-ns hidden bl">
       <form className="pa1">
         <fieldset id="my_todos" className="pa0 bn">
           <div className="flex items-center">
