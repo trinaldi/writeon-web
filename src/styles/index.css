@@ -76,3 +76,8 @@ input {
 .mood.very_good {
   background-color: #137752;
 }
+
+.w-100-i {
+  max-width: 100% !important;
+  width: 100% !important;
+}
