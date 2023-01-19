@@ -44,7 +44,7 @@ const UpdateComment = ({ commentId, oldMessage, postId }) => {
     <>
       {isEditing &&
       <>
-          <form className="w-50 bg-white pa1 absolute" onSubmit={handleSubmit}>
+        <form className="w-50 bg-white pa1 absolute" onSubmit={handleSubmit}>
           <input
             post={postId}
             type="text"
