@@ -48,7 +48,7 @@ const UpdateComment = ({ commentId, oldMessage, postId }) => {
           <input
             post={postId}
             type="text"
-            className="w-100-i"
+            className="input-reset ba b--black-20 pa1 mb2 db w-100-i"
             value={formState.message}
             onChange={(e) => setFormState({
               ...formState,

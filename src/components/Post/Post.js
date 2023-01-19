@@ -11,7 +11,7 @@ const Post = ({ post }) => {
       <strong><p className="f4 underline">{post.title}</p></strong>
       <TodoList items={post.todo} postId={post.id} />
       <MoodPanel postId={post.id} myMood={post.mood?.mood} />
-      <p>{post.body}</p>
+      <p className="b f4 mt4">{post.body}</p>
       <CommentList postId={post.id} comments={post.comment} />
       <NewComment postId={post.id} />
     </Card>
