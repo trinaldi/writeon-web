@@ -4,7 +4,7 @@ import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
 import { ADD_TODO_MUTATION } from '../../graphql/mutations/ADD_TODO_MUTATION';
 
 
-const NewTodo = ({ postId, onNewTodo }) => {
+const NewTodo = ({ className, postId, onNewTodo }) => {
   const [formState, setFormState] = useState({
     task: ''
   })
@@ -38,7 +38,7 @@ const NewTodo = ({ postId, onNewTodo }) => {
       <input
         autoFocus
         value={formState.task}
-        className="input-reset ba b--black-20 pa2 mb2 db w-100"
+        className={`${className} input-reset ba b--black-20 pa2 mb2 db w-100`}
         type="text"
         onChange={(e) => setFormState({
           ...formState,
