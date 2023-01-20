@@ -36,32 +36,35 @@ const Comment = ({ commentId, message, postId }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     updateComment()
-    setIsEditing(false)
+    setIsEditing(!isEditing)
     setFormState({postId: '', message, commentId: ''})
   }
 
   return (
-    <li
-      onBlur={handleSubmit}
-      contentEditable={isEditing}
-      onClick={handleIsEditing}
-      onInput={(e) =>
-          setFormState({
-            ...formState,
-            message: e.currentTarget.textContent
-          })}
-      className={`${isEditing ? 'bb b--black-40' : ''} ml4 mv1 lh-copy`}> ⤷ {message}
+    <div>
+      <li
+        contentEditable={isEditing}
+        onDoubleClick={handleIsEditing}
+        onInput={(e) =>
+            setFormState({
+              ...formState,
+              message: e.currentTarget.textContent
+            })}
+        className={`${isEditing ? 'ba b--black-60 pa2' : ''} ma2 lh-copy`}>
+        {message}
+      </li>
+
       { isEditing &&
-        <>
-          <button class="button bottom-0" onClick={handleSubmit}>
-            <span className="f6">save</span>
-          </button>
-          <button className="button" onClick={handleIsEditing}>
-            <span className="f6">nope</span>
-          </button>
-        </>
+      <div className="ml4">
+        <button class="button bottom-0" onClick={handleSubmit}>
+          <span className="f6">save</span>
+        </button>
+        <button className="button" onClick={handleIsEditing}>
+          <span className="f6">nope</span>
+        </button>
+      </div>
       }
-    </li>
+    </div>
   )
 }
 
