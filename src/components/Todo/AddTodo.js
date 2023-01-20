@@ -18,10 +18,12 @@ const AddTodo = ({ postId }) => {
       }
       { newTodo &&
         <>
+          <NewTodo className="mt3" onNewTodo={handleSubmit} postId={postId} />
           <ButtonLink
             click={handleSubmit}
-            inputStyle={'cp f6 black-60 db ma2'}>nope</ButtonLink>
-          <NewTodo onNewTodo={handleSubmit} postId={postId} />
+            className={'cp f6 black-60'}>
+            nope
+          </ButtonLink>
         </>
       }
     </>
