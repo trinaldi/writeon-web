@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Title from './Typography/Title';
+import Title from '../Typography/Title';
 
 const Header = () => {
   return (

@@ -1,4 +1,4 @@
-import Card from '../UI/Card';
+import Card from '../UI/Display/Card';
 import CommentList from '../Comments/CommentList'
 import MoodPanel from '../Mood/MoodPanel';
 import NewComment from '../Comments/NewComment';

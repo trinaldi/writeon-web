@@ -1,5 +1,5 @@
 import CreatePost from './Post/CreatePost';
-import Header from './UI/Header';
+import Header from './UI/Display/Header';
 import PostList from './Post/PostList';
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
