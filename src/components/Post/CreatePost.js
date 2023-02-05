@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import { CREATE_POST_MUTATION } from '../../graphql/mutations/CREATE_POST_MUTATION';
+import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
+import { parseDate } from './helpers/parseDate'
 import { useMutation } from '@apollo/client'
 import { useNavigate } from 'react-router-dom'
-import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
-import { CREATE_POST_MUTATION } from '../../graphql/mutations/CREATE_POST_MUTATION';
-import { parseDate } from './helpers/parseDate'
 
 const CreatePost = () => {
   const [formState, setFormState] = useState({
