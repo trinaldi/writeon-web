@@ -1,9 +1,7 @@
 import Comment from './Comment';
 import React from 'react'
 
-
 const CommentList = ({ comments }) => {
-
   return(
     <ul className="list pl0 w-100">
       {comments && comments.map(c => (

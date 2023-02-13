@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
+import { PostIdContext } from '../../contexts/postid';
 import { UPDATE_COMMENT_MUTATION } from '../../graphql/mutations/UPDATE_COMMENT_MUTATION';
 import { useMutation } from '@apollo/client'
-import { PostIdContext } from '../../contexts/postid';
 
 const Comment = ({ commentId, message }) => {
   const postId = useContext(PostIdContext)

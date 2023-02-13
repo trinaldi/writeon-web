@@ -3,7 +3,6 @@ import Todo from './Todo';
 import AddTodo from './AddTodo';
 
 const TodoList = ({ items }) => {
-
   return (
     <ul className="list pl0 w-100">
       {

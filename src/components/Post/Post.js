@@ -13,7 +13,7 @@ const Post = ({ post }) => {
       <Card>
         <strong><p className="f4 underline">{post.title}</p></strong>
         <TodoList items={post.todo} />
-        <MoodPanel postId={post.id} myMood={post.mood?.mood} />
+        <MoodPanel myMood={post.mood?.mood} />
         <p className="b f4 mt4">{post.body}</p>
         <CommentList comments={post.comment} />
         <NewComment />
