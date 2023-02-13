@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useMutation } from '@apollo/client'
 import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
 import { ADD_TODO_MUTATION } from '../../graphql/mutations/ADD_TODO_MUTATION';
+import { PostIdContext } from '../../contexts/postid';
 
+const NewTodo = ({ className, onNewTodo }) => {
+  const postId = useContext(PostIdContext)
 
-const NewTodo = ({ className, postId, onNewTodo }) => {
   const [formState, setFormState] = useState({
     task: ''
   })
