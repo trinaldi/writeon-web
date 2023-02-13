@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import NewTodo from './NewTodo';
 import ButtonLink from '../UI/Input/ButtonLink';
 
-const AddTodo = ({ postId }) => {
+const AddTodo = () => {
   const [ newTodo, setNewTodo ] = useState(false)
 
   const handleSubmit = () => {
@@ -18,7 +18,7 @@ const AddTodo = ({ postId }) => {
       }
       { newTodo &&
         <>
-          <NewTodo className="mt3" onNewTodo={handleSubmit} postId={postId} />
+          <NewTodo className="mt3" onNewTodo={handleSubmit} />
           <ButtonLink
             click={handleSubmit}
             className={'cp f6 black-60'}>

@@ -1,9 +1,11 @@
-import React from 'react'
-import { useMutation } from '@apollo/client'
+import React, { useContext } from 'react'
 import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
+import { PostIdContext } from '../../contexts/postid';
 import { UPDATE_TODO_MUTATION } from '../../graphql/mutations/UPDATE_TODO_MUTATION';
+import { useMutation } from '@apollo/client'
 
-const Todo = ({ postId, id, done, task }) => {
+const Todo = ({ id, done, task }) => {
+  const postId = useContext(PostIdContext)
   const completed = done ? 'strike bg-washed-green' : ''
 
   const [updateTodo] = useMutation(UPDATE_TODO_MUTATION, {

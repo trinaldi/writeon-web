@@ -1,13 +1,13 @@
 import Comment from './Comment';
 import React from 'react'
 
-const CommentList = ({ comments, postId }) => {
+const CommentList = ({ comments }) => {
   return(
     <ul className="list pl0 w-100">
       {comments && comments.map(c => (
         <>
           <div className="flex items-baseline">
-            ⤷ <Comment key={c.id} message={c.message} commentId={c.id} postId={postId} />
+            ⤷ <Comment key={c.id} message={c.message} commentId={c.id} />
           </div>
         </>
       ))}

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import MoodInput from './MoodInput';
+import React, { useContext, useState, useEffect } from 'react'
 import { ADD_MOOD_MUTATION } from '../../graphql/mutations/ADD_MOOD_MUTATION';
 import { POSTS_QUERY } from '../../graphql/queries/POSTS_QUERY';
+import { PostIdContext } from '../../contexts/postid';
 import { useMutation } from '@apollo/client'
-import MoodInput from './MoodInput';
 
-const MoodPanel = ({ myMood, postId }) => {
+const MoodPanel = ({ myMood }) => {
+  const postId = useContext(PostIdContext)
   const [mood, setMood] = useState(myMood)
 
   const handleChange = (e) => {
